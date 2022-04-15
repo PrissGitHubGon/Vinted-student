@@ -5,7 +5,6 @@ const cors = require("cors");
 const formidable = require("express-formidable");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
-app.use(cors());
 
 //connexion à la bdd
 mongoose.connect(process.env.MONGODB_URI); // Vous pourrez vous connecter à votre base de données, sans pour autant préciser les identifiants dans le fichier index.js
@@ -13,6 +12,7 @@ mongoose.connect(process.env.MONGODB_URI); // Vous pourrez vous connecter à vot
 //Création du serveur
 const app = express();
 app.use(formidable());
+app.use(cors());
 app.use(morgan("dev")); //permet de voir dans le terminal, le status de la requete demander (200, 400 ou autre), dev = changement de couleur des status dans le terminal
 
 //import des routes
