@@ -10,9 +10,9 @@ const isAuthenticated = require("../middlewares/isAuthenticated");
 
 //Je viens configurer cloudinary avec mes identifiants
 cloudinary.config({
-  cloud_name: "dl6flp50k",
-  api_key: "299129352119639",
-  api_secret: "TfXWXbJITzfsKArM3c0od7bYqsM",
+  cloud_name: CLOUD_NAME,
+  api_key: API_KEY,
+  api_secret: API_SECRET,
 });
 
 router.post("/offer/publish", isAuthenticated, async (req, res) => {
