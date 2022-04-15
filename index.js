@@ -29,5 +29,3 @@ app.all("*", (req, res) => {
 app.listen(process.env.PORT, () => {
   console.log("Server has started ! ");
 });
-
-//MDP géné BDD ne pas perdre : 3C4hw9iFrkFIju6O
